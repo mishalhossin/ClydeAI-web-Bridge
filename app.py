@@ -1,4 +1,4 @@
-import selfcord
+from discord.ext import commands
 import os
 from flask import Flask, request, jsonify
 
