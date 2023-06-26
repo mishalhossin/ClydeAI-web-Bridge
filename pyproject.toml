@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ClydeAI-web-Bridge"
+version = "0.1.0"
+description = ""
+authors = ["Mishal"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.11"
+numpy = "^1.22.2"
+Flask = "^2.2.0"
+urllib3 = "^1.26.12"
+"discord.py-self" = "^2.0.0"
+
+[tool.poetry.dev-dependencies]
+debugpy = "^1.6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
