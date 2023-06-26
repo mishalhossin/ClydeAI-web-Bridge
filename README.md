@@ -21,6 +21,7 @@ Before running the self-bot, make sure you have the following installed:
 To start the self-bot, run the following command:
 
 ```
+python -m poetry install
 python main.py
 ```
 
@@ -34,7 +35,7 @@ Here is an example using cURL to send a message to the self-bot:
 curl -X POST -H "Content-Type: application/json" -d '{"content": "Hello, this is a test message!"}' http://localhost/chat
 ```
 
-Upon receiving the request, the self-bot will send the message to the specified channel on Discord.
+Upon receiving the request, the self-bot will send the message to the @Clyde on Discord and return response
 
 ### Note
 
