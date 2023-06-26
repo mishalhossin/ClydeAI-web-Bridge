@@ -1,6 +1,4 @@
-import discord
 import selfcord
-from discord.ext import commands
 import os
 from flask import Flask, request, jsonify
 
@@ -28,7 +26,7 @@ async def chat_handler():
     content = request.json.get('content')
     thing_to_send = content
   
-    await client.start(os.environ['DISCORD_USER_TOKEN'], bot=False)
+    await client.start(os.environ['DISCORD_USER_TOKEN'])
   
     while True:
        if  message_to_send != "EMPTY":
