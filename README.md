@@ -1,5 +1,8 @@
 # ClydeAI-web-Bridge
 
+![image](https://github.com/mishalhossin/ClydeAI-web-Bridge/assets/91066601/98c9637a-abbe-4aa6-a9ee-8bf4f6e2d4a1)
+
+
 This is a Flask-based Discord self-bot that allows you to send messages to a clyde on Discord and get response from clyde by making a POST request to the `/chat` endpoint. It uses the discord.py library to interact with the Discord API.
 
 ### Prerequisites
