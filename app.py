@@ -1,3 +1,5 @@
+import discord
+import selfcord
 from discord.ext import commands
 import os
 from flask import Flask, request, jsonify
@@ -26,7 +28,7 @@ async def chat_handler():
     content = request.json.get('content')
     thing_to_send = content
   
-    await client.start(os.environ['DISCORD_USER_TOKEN'])
+    await client.start(os.environ['DISCORD_USER_TOKEN'], bot=False)
   
     while True:
        if  message_to_send != "EMPTY":
@@ -36,5 +38,9 @@ async def chat_handler():
     message_to_send = "EMPTY"
   
     return jsonify({'message': current_message})
+
+@app.route('/')
+def root():
+    return 'Try doing this curl -X POST -H "Content-Type: application/json" -d \'\{"content": "Hello, this is a test message!"\}\' https://clydeapi.mishal0legit.repl.co/chat'
 
 app.run(host="0.0.0.0", port=80, threaded=True)
